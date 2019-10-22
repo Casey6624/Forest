@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forest", "Forest\Forest.csproj", "{4A6F3346-27B2-4D46-A4FA-61BCE0F67F3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forest.Data", "..\Forest.Data\Forest.Data\Forest.Data.csproj", "{F4D5C5C9-52AC-4EBC-A767-87D9D6B13968}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forest.Data", "Forest.Data\Forest.Data\Forest.Data.csproj", "{F4D5C5C9-52AC-4EBC-A767-87D9D6B13968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forest.Services", "..\Forest.Services\Forest.Services\Forest.Services.csproj", "{2586BF73-5E4A-486E-B4D7-65E086292182}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forest.Services", "Forest.Services\Forest.Services\Forest.Services.csproj", "{2586BF73-5E4A-486E-B4D7-65E086292182}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
