@@ -252,6 +252,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Forest.Data\Forest.Data\Forest.Data.csproj">
+      <Project>{f4d5c5c9-52ac-4ebc-a767-87d9d6b13968}</Project>
+      <Name>Forest.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Forest.Services\Forest.Services\Forest.Services.csproj">
+      <Project>{2586bf73-5e4a-486e-b4d7-65e086292182}</Project>
+      <Name>Forest.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
