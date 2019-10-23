@@ -8,7 +8,7 @@ using Forest.Data.IDAO;
 using Forest.Data.DAO;
 
 
-namespace Forest.Services
+namespace Forest.Services.Service
 {
     public class MusicService : Forest.Services.IService.IMusicService
     {
