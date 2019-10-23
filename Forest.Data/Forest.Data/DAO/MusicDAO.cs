@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Forest.Data.IDAO;
 
-namespace Forest.Data.IDAO
+namespace Forest.Data.DAO
 {
     public class MusicDAO : IMusicDAO
     {
@@ -15,7 +15,7 @@ namespace Forest.Data.IDAO
             _context = new ForestEntities();
         }
 
-        public IList<MusicCategory> GetMusicCategory()
+        public IList<MusicCategory> GetMusicCategories()
         {
             IQueryable<MusicCategory> _categories;
             _categories = from category in _context.MusicCategory select category;
