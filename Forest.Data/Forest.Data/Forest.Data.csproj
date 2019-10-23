@@ -50,15 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\MusicDAO.cs" />
     <Compile Include="ForestDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ForestDataModel.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="ForestDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ForestDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ForestDataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ForestDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IDAO\IMusicDAO.cs" />
+    <Compile Include="MusicCategory.cs">
+      <DependentUpon>ForestDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Music_Recording.cs">
+      <DependentUpon>ForestDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,6 +92,12 @@
     <Content Include="ForestDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ForestDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>ForestDataModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="ForestDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ForestDataModel.edmx</DependentUpon>
+      <LastGenOutput>ForestDataModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
