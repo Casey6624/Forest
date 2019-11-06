@@ -23,5 +23,15 @@ namespace Forest.Services.Service
         {
             return _musicDAO.GetMusicCategories();
         }
+
+        public IList<Music_Recording> GetMusicRecordings(String genre)
+        {
+            return _musicDAO.GetMusicRecordings(genre);
+        }
+
+        public Music_Recording GetMusicRecording(int id)
+        {
+            return _musicDAO.GetMusicRecording(id);
+        }
     }
 }

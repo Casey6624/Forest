@@ -17,10 +17,21 @@ namespace Forest.Controllers
         {
             _musicService = new Forest.Services.Service.MusicService();
         }
+
         // GET: Music
         public ActionResult Categories()
         {
             return View(_musicService.GetMusicCategories());
+        }
+
+        public ActionResult GetMusicRecordings(string genre)
+        {
+            return View(_musicService.GetMusicRecordings(genre));
+        }
+
+        public ActionResult Recording(int id)
+        {
+            return View(_musicService.GetMusicRecording(id));
         }
 
         // GET: Music/Details/5

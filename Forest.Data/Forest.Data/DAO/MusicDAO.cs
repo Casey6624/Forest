@@ -15,11 +15,26 @@ namespace Forest.Data.DAO
             _context = new ForestEntities();
         }
 
+        public IList<Music_Recording> GetMusicRecordings(string genre)
+        {
+            IQueryable<Music_Recording> _recordings;
+            _recordings = from recording in _context.Music_Recording where recording.Genre == genre select recording;
+            return _recordings.ToList<Music_Recording>();
+        }
+
         public IList<MusicCategory> GetMusicCategories()
         {
             IQueryable<MusicCategory> _categories;
             _categories = from category in _context.MusicCategory select category;
             return _categories.ToList<MusicCategory>();
+        }
+
+        public Music_Recording GetMusicRecording(int id)
+        {
+            IQueryable<Music_Recording> _recording;
+            _recording = from recording in _context.Music_Recording where recording.Id == id select recording;
+
+            return _recording.ToList<Music_Recording>().First();
         }
     }
 }
