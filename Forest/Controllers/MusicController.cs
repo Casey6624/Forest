@@ -24,6 +24,14 @@ namespace Forest.Controllers
             return View(_musicService.GetMusicCategories());
         }
 
+        public ActionResult ArtistRecordingsInGenre(string category, string artist)
+        {
+            ViewBag.Message1 = "Action is artist recordings";
+            ViewBag.Message2 = "Category is" + category;
+            ViewBag.Message3 = "Artist is " + artist;
+            return View();
+        }
+
         public ActionResult GetMusicRecordings(string genre)
         {
             return View(_musicService.GetMusicRecordings(genre));

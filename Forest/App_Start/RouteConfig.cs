@@ -14,10 +14,23 @@ namespace Forest
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "ArtistRecordingsInGenre",
+                url: "{controller}/{action}/{category}/{artist}",
+                defaults: new { controller = "Music", action = "Categories", category = UrlParameter.Optional, artist = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Category",
+                url: "{controller}/{action}/{category}",
+                defaults: new { controller = "Music", action = "Categories", category = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Music", action = "Categories", id = UrlParameter.Optional }
             );
+
         }
     }
 }

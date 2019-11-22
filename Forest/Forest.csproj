@@ -250,6 +250,7 @@
     <Content Include="Views\Music\GetMusicRecordings.cshtml" />
     <Content Include="Views\Music\GetMusicCategories.cshtml" />
     <Content Include="Views\Music\GetMusicRecording.cshtml" />
+    <Content Include="Views\Music\ArtistRecordingsInGenre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -295,7 +296,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51474</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51474/</IISUrl>
+          <IISUrl>http://localhost:58031/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
