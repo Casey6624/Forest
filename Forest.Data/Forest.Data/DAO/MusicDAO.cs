@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Forest.Data.IDAO;
+using Forest.Data.BEANS;
 
 namespace Forest.Data.DAO
 {
@@ -15,12 +16,35 @@ namespace Forest.Data.DAO
             _context = new ForestEntities();
         }
 
+        public IList<MusicBEAN> GetMusicRecordings(int genre)
+        {
+            IQueryable<MusicBEAN> _musicBEANS = from recs in _context.Music_Recording
+                                                from cats in _context.MusicCategory
+                                                where recs.Genre == cats.Id
+                                                where cats.Id == genre
+                                                select new MusicBEAN
+                                                {
+                                                    Id = recs.Id,
+                                                    Artist = recs.Artist,
+                                                    Title = recs.Title,
+                                                    Genre = cats.Genre,
+                                                    Image_Name = recs.Image_Name,
+                                                    Num_Tracks = recs.Num_Tracks,
+                                                    Price = recs.Price,
+                                                    Stock_Count = recs.Stock_Count,
+                                                    Released = recs.Released,
+                                                    Url = recs.Url
+                                                };
+            return _musicBEANS.ToList<MusicBEAN>();
+        }
+
+        /*
         public IList<Music_Recording> GetMusicRecordings(string genre)
         {
             IQueryable<Music_Recording> _recordings;
             _recordings = from recording in _context.Music_Recording where recording.Genre == genre select recording;
             return _recordings.ToList<Music_Recording>();
-        }
+        } */
 
         public void EditMusicRecording(Music_Recording recording)
         {

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Forest.Data.BEANS;
 
 namespace Forest.Data.IDAO
 {
     public interface IMusicDAO
     {
-        IList<Forest.Data.Music_Recording> GetMusicRecordings(string genre);
+        IList<MusicBEAN> GetMusicRecordings(int genre);
 
         IList<Forest.Data.MusicCategory> GetMusicCategories();
 

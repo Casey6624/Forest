@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BEANS\MusicBEAN.cs" />
     <Compile Include="DAO\MusicDAO.cs" />
     <Compile Include="ForestDataModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -76,32 +77,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="ForestDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ForestDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="ForestDataModel.edmx.diagram">
       <DependentUpon>ForestDataModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ForestDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ForestDataModel.Context.cs</LastGenOutput>
       <DependentUpon>ForestDataModel.edmx</DependentUpon>
+      <LastGenOutput>ForestDataModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="ForestDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ForestDataModel.edmx</DependentUpon>
       <LastGenOutput>ForestDataModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

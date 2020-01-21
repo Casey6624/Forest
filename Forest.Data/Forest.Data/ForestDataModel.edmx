@@ -12,7 +12,7 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Artist" Type="nchar" MaxLength="50" />
           <Property Name="Title" Type="nchar" MaxLength="50" />
-          <Property Name="Genre" Type="nchar" MaxLength="10" />
+          <Property Name="Genre" Type="int" Nullable="false" />
           <Property Name="Image_Name" Type="nchar" MaxLength="50" />
           <Property Name="Num_Tracks" Type="int" />
           <Property Name="Price" Type="float" />
@@ -43,7 +43,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Artist" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Genre" Type="Int32" Nullable="false" />
           <Property Name="Image_Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Num_Tracks" Type="Int32" />
           <Property Name="Price" Type="Double" />

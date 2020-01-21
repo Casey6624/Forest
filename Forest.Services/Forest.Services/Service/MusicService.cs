@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using Forest.Data;
 using Forest.Data.IDAO;
 using Forest.Data.DAO;
-
+using Forest.Services.IService;
+using Forest.Data.BEANS;
+using Forest.Data;
 
 namespace Forest.Services.Service
 {
-    public class MusicService : Forest.Services.IService.IMusicService
-    {
+    public class MusicService : IMusicService
+    { 
         private IMusicDAO _musicDAO;
 
         public MusicService()
@@ -29,11 +31,13 @@ namespace Forest.Services.Service
             _musicDAO.EditMusicRecording(recording);
         }
 
-        public IList<Music_Recording> GetMusicRecordings(String genre)
+        IList<MusicBEAN> IMusicService.GetMusicRecordings(int genre)
         {
             return _musicDAO.GetMusicRecordings(genre);
+            //return IList<MusicBEAN>;
         }
 
+   
         public Music_Recording GetMusicRecording(int id)
         {
             return _musicDAO.GetMusicRecording(id);

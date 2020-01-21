@@ -3,58 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Forest.Services;
-using Forest.Services.Service;
-using Forest.Services.IService;
 
 namespace Forest.Controllers
 {
-    public class MusicController : Controller
+    public class MusicAdminController : Controller
     {
         private Forest.Services.IService.IMusicService _musicService;
 
-        public MusicController()
+        public MusicAdminController()
         {
             _musicService = new Forest.Services.Service.MusicService();
         }
 
-        // GET: Music
-        public ActionResult Categories()
+        // GET: MusicAdmin
+        public ActionResult Index()
         {
-            return View(_musicService.GetMusicCategories());
-        }
-
-        public ActionResult ArtistRecordingsInGenre(string category, string artist)
-        {
-            ViewBag.Message1 = "Action is artist recordings";
-            ViewBag.Message2 = "Category is" + category;
-            ViewBag.Message3 = "Artist is " + artist;
             return View();
         }
 
-        public ActionResult GetMusicRecordings(int genre)
-        {
-            return View(_musicService.GetMusicRecordings(genre));
-        }
-
-        public ActionResult Recording(int id)
-        {
-            return View(_musicService.GetMusicRecording(id));
-        }
-
-        // GET: Music/Details/5
+        // GET: MusicAdmin/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Music/Create
+        // GET: MusicAdmin/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Music/Create
+        // POST: MusicAdmin/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -70,13 +49,13 @@ namespace Forest.Controllers
             }
         }
 
-        // GET: Music/Edit/5
+        // GET: MusicAdmin/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Music/Edit/5
+        // POST: MusicAdmin/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -92,13 +71,13 @@ namespace Forest.Controllers
             }
         }
 
-        // GET: Music/Delete/5
+        // GET: MusicAdmin/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Music/Delete/5
+        // POST: MusicAdmin/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

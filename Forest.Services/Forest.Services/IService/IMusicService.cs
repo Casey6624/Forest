@@ -13,7 +13,7 @@ namespace Forest.Services.IService
     {
         IList<MusicCategory> GetMusicCategories();
 
-        IList<Music_Recording> GetMusicRecordings(String genre);
+        IList<Forest.Data.BEANS.MusicBEAN> GetMusicRecordings(int genre);
 
         Forest.Data.Music_Recording GetMusicRecording(int id);
 
