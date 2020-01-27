@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeipzigMusicController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MusicAdminController.cs" />
     <Compile Include="Controllers\MusicController.cs" />
@@ -252,6 +253,7 @@
     <Content Include="Views\Music\GetMusicCategories.cshtml" />
     <Content Include="Views\Music\GetMusicRecording.cshtml" />
     <Content Include="Views\Music\ArtistRecordingsInGenre.cshtml" />
+    <Content Include="Views\LeipzigMusic\GetLeipzigMusicCategories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +280,10 @@
     <ProjectReference Include="..\Forest.Services\Forest.Services\Forest.Services.csproj">
       <Project>{2586bf73-5e4a-486e-b4d7-65e086292182}</Project>
       <Name>Forest.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leipzig.Services\Leipzig.Services.csproj">
+      <Project>{75e20384-c809-4b9d-8d09-be7b7b9183bd}</Project>
+      <Name>Leipzig.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
