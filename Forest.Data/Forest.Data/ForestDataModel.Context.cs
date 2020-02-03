@@ -27,5 +27,7 @@ namespace Forest.Data
     
         public virtual DbSet<Music_Recording> Music_Recording { get; set; }
         public virtual DbSet<MusicCategory> MusicCategory { get; set; }
+
+        //public System.Data.Entity.DbSet<Leipzig.Services.LeipzigServices.MusicBEAN> MusicBEANs { get; set; }
     }
 }

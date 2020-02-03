@@ -253,10 +253,10 @@
     <Content Include="Views\Music\GetMusicCategories.cshtml" />
     <Content Include="Views\Music\GetMusicRecording.cshtml" />
     <Content Include="Views\Music\ArtistRecordingsInGenre.cshtml" />
-    <Content Include="Views\LeipzigMusic\GetLeipzigMusicCategories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\LeipzigMusic\" />
     <Folder Include="Views\MusicAdmin\" />
   </ItemGroup>
   <ItemGroup>
